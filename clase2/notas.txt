@@ -1,0 +1,28 @@
+Variable es un espacio en memoria que voy a reservar para un tipo de dato.
+
+Tipos de datos
+- Tipo Primitivo: strings, bools, number, null y undefined
+    La copia es por valor
+- Tipo Objeto: Objetos, arrays, funciones
+    La copia es por referencia
+
+definicion de variables
+- "let" se define dentro del scope de un cierto nivel con {}, esta viariable no existe en 
+    otro scope (fuera del bloque)
+- "const" se define una constante que no puede ser alterada. En caso de ser un obj const 
+    se puede modificar las propiedades (incluyendo agregar, modificar o eliminarlas) pero 
+    no el objeto en si. Esta propiedad de cambiar las propiedades del obj se llama MUTABILIDAD.
+
+Funciones
+
+function nombre([param [,param [...]]]){
+    instrucciones
+}
+
+- Nombre: Se puede omitir, en este caso se conoce como funcion anonima
+- param: es el argumento que se le pasa la afuncion. Puede llegar a recibir 255 argunmentos.
+- instrucciones: es el codigo a ser ejecutado utilizando los argumentos que recibe.
+
+Funciones IIFE: Son funciones que se ejecutan inmediatamente luego de ser declaradas
+
+
