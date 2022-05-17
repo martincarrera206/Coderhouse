@@ -1,0 +1,12 @@
+<body>
+    <!-- Single file-->
+    <form action="/uploadFile" method="POST" enctype="multipart/form-data">
+      <input type="file" name="myFile">
+      <input type="submit" value="Upload a file">
+    </form>
+    <!-- Multiple file-->
+    <form action="/uploadMultiple" enctype="multipart/form-data" method="POST">
+      Select images: <input type="file" name="myFiles" multiple>
+      <input type="submit" value="Upload files">
+    </form>
+</body>
