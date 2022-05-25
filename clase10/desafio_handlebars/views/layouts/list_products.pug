@@ -1,0 +1,20 @@
+extends ../index.pug
+
+block content
+    if productos
+        table(class="table")
+            thead(class="thead-dark")
+                tr
+                    th="Foto"
+                    th="Titulo"
+                    th="Precio"
+            tbody
+                each product in productos
+                    tr
+                        td
+                            img( src=product.thumbnail alt="" width="64")
+                        td=product.title
+                        td=product.price
+
+    else
+        div( class="alert alert-warning")="No tiene productos en su lista"

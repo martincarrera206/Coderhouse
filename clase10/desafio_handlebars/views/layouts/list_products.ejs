@@ -1,0 +1,41 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs') %>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs')  %>
+        <div class="container">
+            <h2 class="my-3"><%= page_title %></h2>
+
+            <% if(typeof productos != undefined && productos.length > 0 ) { %>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Foto</th>
+                            <th>Titulo</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% productos.forEach(function(producto){ %>
+                            <tr>
+                                <th><img src="<%= producto.thumbnail %>" alt="" width="64"></th>
+                                <th><%= producto.title %></th>
+                                <th><%= producto.price %></th>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            <% }else{ %>
+                <div class="alert alert-warning">
+                    No tiene productos en su lista
+                </div>
+            <% } %>
+
+        </div>
+        <%- include('../partials/footer.ejs')  %>
+        <%- include('../partials/basejs.ejs')  %>
+    </body>
+</html>

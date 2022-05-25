@@ -1,0 +1,17 @@
+<!--index.hbs-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+</head>
+<body>
+    {{> header}}
+    <div class="container">
+        <h2 class="my-3">{{page_title}}</h2>
+        {{{body}}}
+    </div>
+    {{> footer}}
+
+    {{> basejs}}
+</body>
+</html>

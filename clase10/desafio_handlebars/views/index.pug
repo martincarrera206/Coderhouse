@@ -1,0 +1,12 @@
+//- index.pug
+doctype html
+html(lang="en")
+    head
+        include partials/head.pug
+    body
+        include partials/header.pug
+        div.container
+            h2(class="my-3")=page_title
+            block content
+        include partials/footer.pug
+        include partials/basejs.pug

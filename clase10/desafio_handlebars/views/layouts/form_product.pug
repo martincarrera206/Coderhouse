@@ -1,0 +1,21 @@
+extends ../index.pug
+
+block content
+  if success
+    div(class="alert alert-success")
+      strong="Exito"
+      span=" al "+success_action+" el producto"
+        a( href="productos")="Ver listado"
+        
+  form(action="productos" method="POST" enctype="multipart/form-data")
+    div(class='form-group')
+      label(for="title")="Titulo" 
+      input(class='form-control' type='text'  id="title" name="title" aria-describedby="titulo del producto")
+    div(class='form-group')
+      label="Precio" 
+      input(type="text" class="form-control" id="price" name="price" aria-describedby="precio del producto")
+    div(class='form-group')
+      label="Foto" 
+      input(type="file" class="form-control" id="thumbnail" name="thumbnail" aria-describedby="foto del producto")
+    div(class='form-group')
+      input(type="submit" class="btn btn-success btn-lg w-100" value="Guardar Producto")
