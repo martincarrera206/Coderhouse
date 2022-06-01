@@ -213,7 +213,7 @@ io.on('connection', (socket) => {
         const user = users.find(user => user.id === socket.id)
         const message = {
           text: data,
-          time: `${now.getHours()}:${now.getMinutes()}`,
+          time: `${now.toLocaleString()}`,
           user: user
         }
         messages.push(message)
