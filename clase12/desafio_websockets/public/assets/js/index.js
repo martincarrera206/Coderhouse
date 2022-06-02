@@ -78,9 +78,19 @@ btnAutoComplete.addEventListener('click', () =>{
             title : 'Casco de Vikingo',
             price : 480.50,
             thumbnail : 'https://cdn1.iconfinder.com/data/icons/photo-stickers-hats/128/hat_4-128.png'
+        },
+        {
+            title : 'Zapatillas Mike',
+            price : 780.99,
+            thumbnail : 'https://cdn1.iconfinder.com/data/icons/cool-shoes/200/ziyuan_19-512.png'
+        },
+        {
+            title : 'Combo Ping Pong (2 paletas + pelota)',
+            price : 954.89,
+            thumbnail : 'https://cdn1.iconfinder.com/data/icons/customicondesign-office-shadow/256/Sport-table-tennis.png'
         }
     ]
-    const randomProduct = products[Math.floor(Math.random() * 3)]
+    const randomProduct = products[Math.floor(Math.random() * 5)]
     productTitle.value = randomProduct.title
     productPrice.value = randomProduct.price
     productThumbnail.value = randomProduct.thumbnail
