@@ -78,26 +78,15 @@ productRouter.get('/:id', (request, response, next) => {
     return response.status(201).json(product)
 })
 
-productRouter.post('', upload.single('thumbnail'), (request, response, next) => {
+productRouter.post('', (request, response, next) => {
     console.log('POST request recibido')
-    let product = new Producto(request.body.title, request.body.price, '')
-
-    const file = request.file
-    //console.log({file})
-    if(file) product.thumbnail = 'assets/images/productos/'+file.filename
-    //console.log({file: request.file})
-    
+    let product = new Producto(request.body.title, request.body.price, request.body.thumbnail)
     product = Producto.create(product)
     
-    const resp_data = {
-        page_title:'Nuevo Producto',
-        success: 1,
-        success_action: 'guardar',
-        productos : Producto.ar_objetos
-    }
-
+    //Emit nuevo prod para todos los clientes
+    io.sockets.emit('loadProduct', product)
     //Satus 201 para decir que el registro se creo exitosamente
-    return response.status(201).render('index', resp_data)
+    return response.status(201).json(product)
 })
 
 productRouter.put('/:id', upload.single('thumbnail'), (request, response, next) => {
@@ -181,6 +170,7 @@ io.on('connection', (socket) => {
         socket.emit('loadProducts', productos)
     })
 
+    /*
     socket.on('saveProduct', data => {
         let product = new Producto(data.title, data.price, data.thumbnail)
         
@@ -189,6 +179,7 @@ io.on('connection', (socket) => {
         socket.emit('loadProduct', product)
         socket.broadcast.emit('loadProduct', product)
     })
+    */
 
     // Chat Events
     socket.on('joinChat', (data) => {

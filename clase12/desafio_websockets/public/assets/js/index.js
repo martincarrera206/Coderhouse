@@ -52,12 +52,25 @@ btnSaveProduct.addEventListener('click', () =>{
         price : productPrice.value,
         thumbnail : productThumbnail.value
     }
-    socket.emit('saveProduct', product)
-    productTitle.value = ''
-    productPrice.value = ''
-    productThumbnail.value = ''
-})
 
+    // USO DEL FETCH PARA EL GUARDADO
+    fetch('http://localhost:8080/form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify( product )
+    })
+    .then(response => response.json())
+    .then(data => {
+        productTitle.value = ''
+        productPrice.value = ''
+        productThumbnail.value = ''
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+})
 
 //Ayudita para los tests ;)
 const btnAutoComplete = document.getElementById('btnAutoComplete')
