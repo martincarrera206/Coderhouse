@@ -1,0 +1,18 @@
+// Mostrar bases de datoss
+show dbs
+
+// Mostrar colecciones dentro de una base de datos
+show collections
+
+// Insertar un documento en la coleccion
+db.users.insertOne({name: "Pepito", lastname:"Suarez"})
+
+// Insertar multiples documentos en la coleccion (pueden o no tener los mismos campos)
+db.users.insertMany([{name: "Alejandro", lastname:"Zapata", email:"zapataA@gmail.com"}, {name: "Ernesto", lastname:"Bosco", dni:"38555666"}])
+
+//Comparacion de terminologia SQL y MongoDB
+SQL     =>  MongoDB
+Tabla   =   Coleccion
+Fila    =   Documento
+Columna =   Campo
+

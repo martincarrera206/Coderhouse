@@ -1,0 +1,7 @@
+1. crear una carpeta para almacenar los documentos de la BD
+2. copiar la ruta (C:\Users\Martin\Proyects\MongoDB)
+3. abrir cmd como admin y correr el commando mongod --dbpath "{ruta de carpeta}"
+4. abrir nueva ventana cmd como admin y correr mongo
+5. Listo
+
+
