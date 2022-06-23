@@ -1,5 +1,3 @@
-const { db } = require("../clase19/models/user")
-
 const productos = [
     {
         title : 'Basketball',
