@@ -1,0 +1,23 @@
+[
+  {
+    "products": [],
+    "id": 1,
+    "timestamp": 1654656031891
+  },
+  {
+    "products": [
+      {
+        "nombre": "test",
+        "precio": 55,
+        "foto": "no_es_un_link.com.ar",
+        "stock": 999999,
+        "descripcion": "producto de prueba",
+        "codigo": "azazaz",
+        "id": 1,
+        "timestamp": 1654656502553
+      }
+    ],
+    "id": 2,
+    "timestamp": 1654656036234
+  }
+]

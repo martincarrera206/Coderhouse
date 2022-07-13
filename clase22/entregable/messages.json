@@ -1,0 +1,32 @@
+{
+  "entities": {
+    "chat": {
+      "undefined": {
+        "0": {
+          "text": "asdasd",
+          "time": "7/12/2022, 9:58:15 PM",
+          "user_id": "KPUptIPO7djWJZfCAAAB",
+          "id": 10,
+          "user": {
+            "id": "KPUptIPO7djWJZfCAAAB",
+            "nombre": "asd",
+            "apellido": "asd",
+            "email": "asd@asd",
+            "edad": "23",
+            "alias": "",
+            "avatar": "https://bootdey.com/img/Content/avatar/avatar3.png"
+          },
+          "author": {
+            "id": "KPUptIPO7djWJZfCAAAB",
+            "nombre": "asd",
+            "apellido": "asd",
+            "email": "asd@asd",
+            "edad": "23",
+            "alias": "",
+            "avatar": "https://bootdey.com/img/Content/avatar/avatar3.png"
+          }
+        }
+      }
+    }
+  }
+}
